@@ -33,14 +33,15 @@ class App extends React.Component {
 function UserCard(props) {
   return(
     <div>
-      <h4>{props.myData.name}</h4>
-      <h3>{props.myData.login}</h3>
-      <h3>{props.myData.followers}</h3>
-      <h3>{props.myData.following}</h3>
-      <h3>{props.myData.location}</h3>
+      {/* <img {...myData.html_url} alt='my photo' /> */}
+      <h4>Name: {props.myData.name}</h4>
+      <h3>Login: {props.myData.login}</h3>
+      <h3>{props.myData.followers} Followers</h3>
+      <h3>Following: {props.myData.following} people</h3>
+      <h3>Located in: {props.myData.location}</h3>
       <div>
         {props.myFollowers.map(follower =>
-          <div key={follower.id}>{follower.login}</div>
+          <div key={follower.id}>My Followers: {follower.login}</div>
           )}
       </div>
     </div>

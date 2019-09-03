@@ -59,6 +59,7 @@ When you have those completed, you're ready to start coding!
   https://api.github.com/users/<Your github name>/followers
 - Set that data to state as well, and display the data in your app
 
+
 ## STEP 4 - Style the User Card
 
 - Now it's time to style up your app
