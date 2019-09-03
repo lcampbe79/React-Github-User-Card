@@ -33,7 +33,7 @@ class App extends React.Component {
 function UserCard(props) {
   return(
     <div>
-      {/* <img {...myData.html_url} alt='my photo' /> */}
+      <img src={props.myData.avatar_url} alt='my pic'></img>
       <h4>Name: {props.myData.name}</h4>
       <h3>Login: {props.myData.login}</h3>
       <h3>{props.myData.followers} Followers</h3>
