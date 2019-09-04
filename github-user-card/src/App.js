@@ -2,6 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 
+import CardList from './components/CardList.js'
+import UserCard from './components/MyCard.js'
+
 class App extends React.Component {
   constructor() {
     super();
@@ -26,25 +29,10 @@ class App extends React.Component {
     return (
       <div className="App">
        <UserCard myData={this.state.myData} myFollowers={this.state.myFollowers}/>
+       <CardList myFollowers={this.state.myFollowers} />
       </div>
     );
   }
 }
-function UserCard(props) {
-  return(
-    <div>
-      <img src={props.myData.avatar_url} alt='my pic'></img>
-      <h4>Name: {props.myData.name}</h4>
-      <h3>Login: {props.myData.login}</h3>
-      <h3>{props.myData.followers} Followers</h3>
-      <h3>Following: {props.myData.following} people</h3>
-      <h3>Located in: {props.myData.location}</h3>
-      <div>
-        {props.myFollowers.map(follower =>
-          <div key={follower.id}>My Followers: {follower.login}</div>
-          )}
-      </div>
-    </div>
-  )
-}
+
 export default App;
