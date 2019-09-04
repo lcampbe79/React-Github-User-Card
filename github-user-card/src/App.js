@@ -26,9 +26,10 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className="App">
-       <UserCard myData={this.state.myData} myFollowers={this.state.myFollowers}/>
+       <UserCard user={this.state.myData} myFollowers={this.state.myFollowers}/>
        <CardList myFollowers={this.state.myFollowers} />
       </div>
     );
